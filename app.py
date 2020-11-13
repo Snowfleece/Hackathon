@@ -26,6 +26,18 @@ def aboutus():
 def faq():
 	return render_template('faq.html')
 
+@app.route('/faq2', methods=['GET'])
+def faq2():
+	return render_template('faq2.html')
+
+@app.route('/faq3', methods=['GET'])
+def faq3():
+	return render_template('faq3.html')
+
+@app.route('/faq4', methods=['GET'])
+def faq4():
+	return render_template('faq4.html')
+
 @app.route('/', methods=['POST', 'GET'])
 def index():
 	if request.method == 'POST':

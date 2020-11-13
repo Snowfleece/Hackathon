@@ -5,14 +5,25 @@
 {% endblock %}
 
 {% block body %}
+<div id="navbar" class="space-evenly">
+  <span>
+  <a href="/">Forum</a>
+  <a href="/aboutus">About Us</a>
+  <a href="/faq">FAQ</a>
+  </span>
+  <a href="/mainpage"><img src="../static/logo.png" width=145 height=99></img></a>
+  <span id="rightSide">
+    <button class="standardbutton" id="login">Login</button>
+  </span>
+</div>
+
 <div class="content">
-  <h1>Climate Match</h1>
   {% if tasks|length < 1 %}
-    <h4>There are no tasks. Create one below</h4>
+    <h4>There are no questions. Create one below!</h4>
   {% else %}
   <table>
     <tr>
-      <th>Task</th>
+      <th>Question</th>
       <th>Added</th>
       <th>Actions</th>
     </tr>
@@ -31,7 +42,7 @@
   {% endif %}
   <form action="/" method="POST">
     <input type="text" name="content" id="content">
-    <input type="submit" value="Add Task">
+    <input type="submit" value="Add Question">
   </form>
 </div>
 {% endblock %}
